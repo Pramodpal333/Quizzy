@@ -16,17 +16,17 @@ class MainActivity : AppCompatActivity() {
 
         val nextBtn = findViewById<Button>(R.id.nextBtn)
 
-        nextBtn.setOnClickListener({
-            val intent = Intent(this@MainActivity,Questions::class.java)
-        startActivity(intent)
-            finish()
-        })
+//        nextBtn.setOnClickListener({
+//            val intent = Intent(this@MainActivity,Questions::class.java)
+//        startActivity(intent)
+//            finish()
+//        })
 
-//        Handler(Looper.getMainLooper()).postDelayed({
-//            val intent = Intent(this@MainActivity,WelcomePage::class.java)
-//            startActivity(intent)
-//
-//        }, 3000)
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this@MainActivity,WelcomePage::class.java)
+            startActivity(intent)
+
+        }, 3000)
 
     }
 }
