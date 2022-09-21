@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="252dp"
+        android:layout_marginTop="180dp"
         android:src="@drawable/ic_quizy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -25,15 +25,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="-50dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="152dp"
+        android:elevation="20dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.573">
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -41,7 +42,7 @@
             android:layout_margin="12dp"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="15dp">
+            android:padding="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -60,25 +61,34 @@
                 android:textColor="#514B4B"
                 android:textSize="15sp" />
 
-<!--            <com.google.android.material.textfield.TextInputLayout-->
-<!--                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="20dp">-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp">
 
-<!--                <androidx.appcompat.widget.AppCompatEditText-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="60dp"-->
-<!--                    android:hint="Name"-->
-<!--                    android:inputType="textCapWords"-->
-<!--                    android:textColor="@color/black" />-->
-<!--            </com.google.android.material.textfield.TextInputLayout>-->
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etUsername"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:hint="Name"
+                                android:inputType="textCapWords"
+                                android:textColor="@color/black" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
 
 
             <Button
+                android:id="@+id/btnSubmit"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="16dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:inputType="text"
                 android:text="Submit" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>

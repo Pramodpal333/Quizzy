@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val nextBtn = findViewById<Button>(R.id.nextBtn)
+//        val nextBtn = findViewById<Button>(R.id.nextBtn)
 
 //        nextBtn.setOnClickListener({
 //            val intent = Intent(this@MainActivity,Questions::class.java)
@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this@MainActivity,WelcomePage::class.java)
             startActivity(intent)
+            finish()
 
         }, 3000)
 
