@@ -10,4 +10,8 @@
 <color name="muted">#CECECE</color>
     <color name="btn_color">#2451DA</color>
     <color name="muted_text">#868080</color>
+    <color name="Primary">#4646F8</color>
+
+    <color name="correctAnswer">#08DC11</color>
+    <color name="wrongAnswer">#ff0000</color>
 </resources>

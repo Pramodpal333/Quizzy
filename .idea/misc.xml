@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Pramod/QuizzApp/app/src/main/res/drawable/correct_answer.xml" value="0.124" />
         <entry key="..\:/Pramod/QuizzApp/app/src/main/res/drawable/options_bg.xml" value="0.1615" />
+        <entry key="..\:/Pramod/QuizzApp/app/src/main/res/drawable/selected_option.xml" value="0.1615" />
+        <entry key="..\:/Pramod/QuizzApp/app/src/main/res/drawable/wrong_answer.xml" value="0.123" />
         <entry key="..\:/Pramod/QuizzApp/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Pramod/QuizzApp/app/src/main/res/layout/activity_questions.xml" value="0.2" />
         <entry key="..\:/Pramod/QuizzApp/app/src/main/res/layout/activity_welcome_page.xml" value="0.2" />
