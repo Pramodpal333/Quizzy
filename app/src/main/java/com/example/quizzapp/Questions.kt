@@ -65,7 +65,7 @@ class Questions : AppCompatActivity() , View.OnClickListener{
 
     private fun getQuestions() {
 
-        var mCurrentPosition = 1
+        defaultOptionsView()
 
         val question: Question = mQuestionList!![mCurrentPosition - 1]
         ivFlag?.setImageResource(question.image)
@@ -145,6 +145,15 @@ class Questions : AppCompatActivity() , View.OnClickListener{
                        answerView(mSelectedItemPostion, R.drawable.wrong_answer)
                    }
                    answerView(question.correctAnswer, R.drawable.correct_answer)
+
+                   if (mCurrentPosition == mQuestionList!!.size){
+                       btnCheckAnswer?.text = "Finish"
+                   } else {btnCheckAnswer?.text = "Next Question"
+
+
+                   }
+
+                   mSelectedItemPostion = 0
                }
             }
         }
