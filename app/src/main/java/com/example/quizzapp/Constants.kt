@@ -2,6 +2,10 @@ package com.example.quizzapp
 
 object Constants {
 
+    const val USER_NAME : String = "user_name"
+    const val TOTAL_QUESTIONS :String = "total_questions"
+    const val CORRECT_ANSWERS :String = "correct_answers"
+
     fun getQuestions():ArrayList<Question> {
 
         val questionList = ArrayList<Question>()
@@ -91,7 +95,7 @@ object Constants {
             "India","Denmark" , "Germany", "Maldives", 3
         )
 
-        questionList.add(que7)
+        questionList.add(que8)
 
         //8
 
@@ -103,7 +107,7 @@ object Constants {
             "Germany","Lithuania" , "Morocco", "Kuwait", 4
         )
 
-        questionList.add(que7)
+        questionList.add(que9)
 
         //9
 

@@ -19,21 +19,20 @@ class WelcomePage : AppCompatActivity() {
 
         var checkName: String? = null
 
-        btnSubmit.setOnClickListener(
-            {
+        btnSubmit.setOnClickListener{
                 checkName = etUsername.text.toString()
 
                 if (checkName.isNullOrEmpty()){
                     Toast.makeText(this,"Please Enter your Name",Toast.LENGTH_LONG).show()
                 } else {
                     val intent = Intent(this@WelcomePage, Questions::class.java)
-                    intent.putExtra("username", checkName)
+                    intent.putExtra(Constants.USER_NAME, checkName)
                     startActivity(intent)
 
 
                 }
 
             }
-        )
+
     }
 }

@@ -42,24 +42,57 @@
         android:gravity="center"
         android:text="Congratulations"
         android:textColor="@color/white"
-        android:textSize="50sp"
+        android:textSize="40sp"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ivTrophy" />
 
     <TextView
+        android:id="@+id/tvName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:fontFamily="sans-serif"
+        tools:text="Pramod"
         android:gravity="center"
-        android:text="you made it to the End"
         android:textColor="@color/white"
-        android:textSize="20sp"
-
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvCongra" />
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/tvScrore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        tools:text="Your Score is 9 out of 9"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <Button
+        android:id="@+id/btnFinish"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@color/white"
+        android:text="Try Again"
+        android:textColor="@color/muted_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvScrore"
+        app:rippleColor="#EAEAEA" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

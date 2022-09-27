@@ -1,15 +1,13 @@
 package com.example.quizzapp
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.ProgressBar
-import android.widget.TextView
+import android.widget.*
 import androidx.core.content.ContextCompat
 
 class Questions : AppCompatActivity() , View.OnClickListener{
@@ -18,6 +16,8 @@ class Questions : AppCompatActivity() , View.OnClickListener{
     private var mQuestionList: ArrayList<Question>? = null
     private var mSelectedItemPostion: Int = 0
 
+    private  var mUserName:String? = null
+    private var mCorrectAnswers : Int = 0
 
     private var progressBar :ProgressBar? = null
     private var tvProgress : TextView? = null
@@ -47,6 +47,8 @@ class Questions : AppCompatActivity() , View.OnClickListener{
         tvOptionFour = findViewById(R.id.tvOptionFour)
 
         btnCheckAnswer = findViewById(R.id.btnCheckAnswer)
+
+        mUserName = intent.getStringExtra(Constants.USER_NAME)
 
         val username = intent.getStringExtra("username")
 
@@ -136,6 +138,14 @@ class Questions : AppCompatActivity() , View.OnClickListener{
                    when{
                        mCurrentPosition <= mQuestionList!!.size -> {
                            getQuestions()
+                       } else -> {
+                       Toast.makeText(this,"You Made it to End",Toast.LENGTH_SHORT).show()
+                       val intent = Intent(this@Questions,Result::class.java)
+                       intent.putExtra(Constants.USER_NAME, mUserName)
+                       intent.putExtra(Constants.CORRECT_ANSWERS,mCorrectAnswers)
+                       intent.putExtra(Constants.TOTAL_QUESTIONS,mQuestionList?.size)
+                       startActivity(intent)
+                       finish()
                        }
                    }
 
@@ -143,8 +153,11 @@ class Questions : AppCompatActivity() , View.OnClickListener{
                    val question = mQuestionList?.get(mCurrentPosition-1)
                    if (question!!.correctAnswer !=  mSelectedItemPostion){
                        answerView(mSelectedItemPostion, R.drawable.wrong_answer)
+                   }else {
+                       mCorrectAnswers++
                    }
                    answerView(question.correctAnswer, R.drawable.correct_answer)
+
 
                    if (mCurrentPosition == mQuestionList!!.size){
                        btnCheckAnswer?.text = "Finish"
